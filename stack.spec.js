@@ -14,4 +14,11 @@ describe('Stack', () => {
     stack.items.push(2)
     expect(stack.isEmpty()).toBe(false)
   })
+
+  it('Should have an isFull function that returns true if the stack is full and false otherwise', () => {
+    let stack = new Stack(3)
+    expect(stack.isFull()).toBe(false)
+    stack.items.push(0, 1, 2)
+    expect(stack.isFull()).toBe(true)
+  })
 })
