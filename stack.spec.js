@@ -21,4 +21,12 @@ describe('Stack', () => {
     stack.items.push(0, 1, 2)
     expect(stack.isFull()).toBe(true)
   })
+
+  describe('Stack push', () => {
+    it('Should add a new element on top of the stack', () => {
+      let stack = new Stack(3)
+      stack.push(2)
+      expect(stack.items[stack.items.length -1]).toBe(2)
+    })
+  })
 })
