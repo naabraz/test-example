@@ -29,5 +29,10 @@ describe('Stack', () => {
       stack.push(2)
       expect(stack.items[stack.items.length -1]).toBe(2)
     })
+
+    it('Should return the new element pushed at the top of the stack', () => {
+      let elementPushed = stack.push(2)
+      expect(elementPushed).toBe(2)
+    })
   })
 })

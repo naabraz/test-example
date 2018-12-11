@@ -14,6 +14,7 @@ class Stack {
 
   push(element) {
     this.items.push(element)
+    return element
   }
 }
 
