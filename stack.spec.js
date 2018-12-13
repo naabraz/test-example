@@ -44,19 +44,36 @@ describe('Stack', () => {
   })
 
   describe('Stack pop', () => {
-    it('Should remove the last element of the stack', () => {
+    it('Should remove the last element from the stack', () => {
       stack.items = [1, 2, 3]
       stack.pop()
       expect(stack.items[stack.items.length -1]).toBe(2)
     })
 
-    it('Should return the element popped of the stack', () => {
+    it('Should return the element popped from the stack', () => {
       stack.items = [1, 2, 3]
       expect(stack.pop()).toBe(3)
     })
 
     it('Should try to pop an empty stack', () => {
       expect(stack.pop()).toBe('Empty')
+    })
+  })
+
+  describe('Stack shift', () => {
+    it('Should remove the first element from the stack', () => {
+      stack.items = [1, 2, 3]
+      stack.shift()
+      expect(stack.items[0]).toBe(2)
+    })
+
+    it('Should return the element shifted from the stack', () => {
+      stack.items = [1, 2, 3]
+      expect(stack.shift()).toBe(1)
+    })
+
+    it('Should try to shift an empty stack', () => {
+      expect(stack.shift()).toBe('Empty')
     })
   })
 })

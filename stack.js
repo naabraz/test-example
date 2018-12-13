@@ -28,6 +28,14 @@ class Stack {
 
     return this.items.pop()
   }
+
+  shift() {
+    if (this.isEmpty()) {
+      return 'Empty'
+    }
+
+    return this.items.shift()
+  }
 }
 
 module.exports = Stack
