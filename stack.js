@@ -13,28 +13,18 @@ class Stack {
   }
 
   push(element) {
-    if (this.isFull()) {
-      return 'Full'
-    }
+    if (this.isFull()) return 'Full'
 
     this.items.push(element)
     return element
   }
 
   pop() {
-    if (this.isEmpty()) {
-      return 'Empty'
-    }
-
-    return this.items.pop()
+    return this.isEmpty() ? 'Empty' : this.items.pop()
   }
 
   shift() {
-    if (this.isEmpty()) {
-      return 'Empty'
-    }
-
-    return this.items.shift()
+    return this.isEmpty() ? 'Empty' : this.items.shift()
   }
 }
 
