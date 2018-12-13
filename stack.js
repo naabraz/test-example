@@ -20,6 +20,14 @@ class Stack {
     this.items.push(element)
     return element
   }
+
+  pop() {
+    if (this.isEmpty()) {
+      return 'Empty'
+    }
+
+    return this.items.pop()
+  }
 }
 
 module.exports = Stack

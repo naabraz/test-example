@@ -42,4 +42,21 @@ describe('Stack', () => {
       expect(element).toBe('Full')
     })
   })
+
+  describe('Stack pop', () => {
+    it('Should remove the last element of the stack', () => {
+      stack.items = [1, 2, 3]
+      stack.pop()
+      expect(stack.items[stack.items.length -1]).toBe(2)
+    })
+
+    it('Should return the element popped of the stack', () => {
+      stack.items = [1, 2, 3]
+      expect(stack.pop()).toBe(3)
+    })
+
+    it('Should try to pop an empty stack', () => {
+      expect(stack.pop()).toBe('Empty')
+    })
+  })
 })
